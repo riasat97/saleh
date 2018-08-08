@@ -1,40 +1,38 @@
 package saleh;
 import java.util.*;
-public class Saleh {
-   
+class Pet {
+    
+        public String name;
+        public char type;
+        public Pet(String name,char type){
+           this.name=name;
+           this.type=type;
+       }
+}
+ public class Saleh {
+    
    public static void main(String[] args) {
-        int n,i;
-        Scanner input = new Scanner(System.in);
-        System.out.print("Enter number of Employees: ");
-        n = input.nextInt();
-        int arr[]=new int[n];
-        for(i=0;i<arr.length;i++){
-            System.out.println("Enter Employee "+(i+1)+" income :");
-            arr[i]=input.nextInt();
-        }          
-        sortArray(arr);//selection sort        
-        printArray(arr);
-    }
+       String name,terminate="stop"; 
+       char type;
+       Scanner input = new Scanner(System.in);
+       ArrayList<Pet> list=new ArrayList<Pet>();
+       while(true){
+           
+           System.out.println("Pet name:");
+           name=input.next();
+           if(terminate.equalsIgnoreCase(name))break;
+           System.out.println("Enter d for dog or c for cat");
+           type = input.next(".").charAt(0);
+           Pet p=new Pet(name,type);
+           list.add(p);
+       }
+       
+        for(Pet p : list){
+           System.out.println("Name:"+p.name); 
+           System.out.println("Type:"+p.type); 
 
-    private static void printArray(int[] arr) {
-        int i;
-        System.out.println("Income In asending order :");
-        for(i=0;i<arr.length;i++)
-            System.out.println(arr[i]);
-    }
-
-    private static void sortArray(int[] arr) { //Selection Sort
-        int i,j,temp,min;
-        for(i=0;i<arr.length-1;i++){
-            min=i;
-            for(j=i+1;j<arr.length;j++){
-                if(arr[min]>arr[j])
-                    min=j;
-            }     
-            temp=arr[i];
-            arr[i]=arr[min];
-            arr[min]=temp;            
         }
+            
     }
 }
 
