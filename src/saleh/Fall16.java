@@ -1,11 +1,12 @@
 package saleh;
-import java.util.*;
 
-public class Saleh {
-    
-   public static void main(String[] args)
+public class Fall16 {
+public int adjust(double amount){ return (int)amount;}
+public void adjust(double amount,double charge){}
+
+    public static void main(String[] args)
       {
-          Saleh s=new Saleh();
+          Fall16 s=new Fall16();
           //g)
           int sum=0;
           int i,j,k=2;
@@ -45,7 +46,3 @@ public class Saleh {
           System.out.println("cube root "+Math.cbrt(x*y));
       }    
 }
-
-
-
- 
